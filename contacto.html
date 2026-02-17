@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🪴 Jardinería Vida Nueva - Contacto 🪴</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="icon" href="img/icono.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="contenedor-header">
+    <a href="index.html">
+      <img src="img/icono.png" alt="Ícono Jardinería" class="icono-header" />
+    </a>
+    <div class="titulo-header">
+      <h1>🪴 Jardinería Vida Nueva 🪴</h1>
+      <p>Desde 2005, embelleciendo tus espacios verdes</p>
+    </div>
+  </div>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- INFORMACIÓN DE CONTACTO -->
+<section class="seccion bg-claro zoom-scroll" id="contacto">
+  <h2>Contáctanos</h2>
+  <p><strong>Dirección:</strong> Tumbaco - El Arenal</p>
+  <p><strong>Horario:</strong> Lunes a Viernes, 8:00 AM - 5:00 PM</p>
+  <p><strong>Teléfono:</strong> 096-099-2712</p>
+  <p><strong>Email:</strong> jardineriavidanueva1@gmail.com</p>
+
+  <div style="text-align: center; margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+    <a href="mailto:jardineriavidanueva1@gmail.com" target="_blank" class="boton">
+      <i class="fas fa-envelope red-mail"></i> Correo
+    </a>
+    <a href="https://wa.me/593960992712" target="_blank" class="boton">
+      <i class="fab fa-whatsapp red-whatsapp"></i> WhatsApp
+    </a>
+  </div>
+
+  <p style="margin-top: 20px;">También puedes encontrarnos en nuestras redes sociales:</p>
+  <div class="redes-sociales" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+    <a href="https://www.facebook.com/profile.php?id=61578672870787" target="_blank" class="boton">
+      <i class="fab fa-facebook red-facebook"></i> Facebook
+    </a>
+    <a href="https://www.instagram.com/jardineriavidanueva/" target="_blank" class="boton">
+      <i class="fab fa-instagram red-instagram"></i> Instagram
+    </a>
+    <a href="https://www.tiktok.com/@jardineriavidanueva" target="_blank" class="boton">
+      <i class="fab fa-tiktok red-tiktok"></i> TikTok
+    </a>
+    <a href="https://www.youtube.com/@JardineriaVidaNueva" target="_blank" class="boton">
+      <i class="fab fa-youtube red-youtube"></i> YouTube
+    </a>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="seccion bg-oscuro mapa zoom-scroll">
+  <h2>Ubicación</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6973.431461186081!2d-78.37909572764579!3d-0.21181811838920167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d593fced52a02d%3A0x10c3bf0808e5fd7f!2sDe%20las%20Bugambillas%2C%20170184%20Quito!5e0!3m2!1ses-419!2sec!4v1753295180714!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- FORMULARIO -->
+<section id="formulario" class="formulario seccion bg-claro zoom-scroll">
+  <h2>Formulario de Contacto</h2>
+  <p>Si prefieres, puedes enviarnos un mensaje directamente desde aquí:</p>
+  <form id="contactForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="formMessage" style="margin-top: 15px;"></div>
+</section>
+
+</main>
+
+<button id="btnSubir" title="Volver arriba">⬆</button>
+
+<footer>
+  <div class="footer-redes">
+    <a href="https://www.facebook.com/profile.php?id=61578672870787" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/jardineriavidanueva/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@jardineriavidanueva" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.youtube.com/@JardineriaVidaNueva" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+  <p>&copy; 2025 Jardinería Vida Nueva. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="enviar_formulario.js"></script>
+
+</body>
+</html>

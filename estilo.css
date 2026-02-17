@@ -1,0 +1,652 @@
+/* =================== RESET =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =================== TIPOGRAFÍA Y BODY =================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f9f4;
+  color: #2f4f2f;
+  line-height: 1.6;
+}
+p {
+  font-size: 1.2rem; /* Aumenta el valor según lo que necesites */
+  line-height: 1.8;
+}
+
+
+/* =================== HEADER =================== */
+header {
+  background: #2f6b32;
+  color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  animation: slideDownFade 0.8s ease-out both;
+}
+
+header:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  background: #388e3c;
+}
+
+.contenedor-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.icono-header {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: #ffffff33;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+}
+.contenedor-header {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+header h1 {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+}
+
+.icono-header {
+  order: -1; 
+  margin-bottom: 5px;
+}
+
+.icono-header:hover {
+  transform: rotate(6deg) scale(1.1);
+  filter: brightness(1.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+header h1 {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+/* =================== MENÚ DE NAVEGACIÓN =================== */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.menu li a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  background: #a7c957;
+  color: #1e2f1e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #a7c957;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* =================== HERO =================== */
+.hero {
+  position: relative;
+  height: 60vh;
+  background: url('img/home.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fefefe;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-texto {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-texto h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-texto p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* =================== BOTONES =================== */
+.boton {
+  background: #daeeaa;
+  color: #1e2f1e;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease both;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.boton:hover {
+  transform: scale(1.2);
+  background: #8aae4f;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.boton:focus {
+  outline: none;
+  background: #8aae4f;
+}
+
+.boton.clicked {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.boton.pulse {
+  animation: pulse-btn 1.5s infinite ease-in-out;
+}
+
+/* =================== SECCIONES =================== */
+.seccion {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.bg-claro {
+  background: #ffffff;
+  color: #2f4f2f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bg-oscuro {
+  background: #386641;
+  color: #e9f1df;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.seccion h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #a7c957;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* =================== SERVICIOS =================== */
+.contenedor-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.servicio {
+  width: 300px;
+  background-color: #f3f9f3;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.servicio:hover {
+  transform: scale(1.03);
+}
+
+.servicio img {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.servicio h3 {
+  margin: 10px 0 5px;
+  color: #2b5d34;
+}
+
+.servicio p {
+  font-size: 15px;
+  padding: 0 15px 15px;
+  color: #444;
+}
+
+/* =================== FORMULARIO =================== */
+.formulario {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h2 {
+  text-align: center;
+  color: #2f4f2f;
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2b5d34;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #a7c957;
+  border-radius: 6px;
+  background-color: #f9fff7;
+  font-size: 1rem;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #8aae4f;
+  box-shadow: 0 0 5px rgba(135, 183, 64, 0.4);
+}
+
+.formulario button {
+  background-color: #2f6b32;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #386641;
+}
+
+/* =================== REDES SOCIALES =================== */
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 20px 0;
+}
+
+.redes-sociales li a {
+  color: #2f6b32;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #e3f6d4;
+  padding: 10px 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.redes-sociales li a:hover {
+  background-color: #a7c957;
+  color: #1e2f1e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.redes-sociales a i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.red-facebook { color: #1877f2; }
+.red-instagram { color: #e1306c; }
+.red-youtube { color: #ff0000; }
+
+/* =================== GALERÍA =================== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.galeria img,
+.galeria video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: zoomIn 0.6s ease both;
+}
+
+.galeria img:hover,
+.galeria video:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+/* =================== MAPA =================== */
+.mapa iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.video-thumbnail {
+  width: 100%;
+  max-width: 966px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* =================== SLIDER =================== */
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-manual {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.slider-manual img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Flechas */
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(47, 75, 47, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.flecha:hover {
+  background-color: rgba(167, 201, 87, 0.9);
+}
+
+.flecha-izquierda { left: 10px; }
+.flecha-derecha { right: 10px; }
+
+/* =================== FOOTER =================== */
+footer {
+  background: linear-gradient(135deg, #2f6b32, #3b7a3c);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  animation: fadeInUp 1s ease both;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.footer-redes {
+  margin-bottom: 0.8rem;
+}
+
+.footer-redes a {
+  margin: 0 12px;
+  color: white;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-redes a:hover {
+  transform: scale(1.2);
+  color: #d4f8d4;
+}
+
+/* =================== BOTÓN VOLVER ARRIBA =================== */
+#btnSubir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease both;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#btnSubir:hover {
+  transform: scale(1.2);
+  background-color: #45a049;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+#btnSubir:focus {
+  outline: none;
+}
+
+/* =================== ANIMACIONES =================== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDownFade {
+  0% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-btn {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 768px) {
+  .contenedor-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-texto h2 {
+    font-size: 2rem;
+  }
+
+  .hero-texto p {
+    font-size: 1rem;
+  }
+
+  .boton {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .servicio {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .menu li a {
+    width: 90%;
+    text-align: center;
+  }
+}
+@keyframes zoomInScroll {
+  0% {
+    opacity: 0;
+    transform: scale(0.7); /* Más pequeño para que el zoom sea más marcado */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-scroll {
+  opacity: 0;
+  transform: scale(0.7); /* Coincide con el inicio de la animación */
+  transition: all 0.8s ease-out;
+}
+
+.zoom-scroll.visible {
+  animation: zoomInScroll 0.8s ease-out forwards;
+}
